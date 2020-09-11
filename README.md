@@ -1,1 +1,1 @@
-# Omamori
+# omamori
