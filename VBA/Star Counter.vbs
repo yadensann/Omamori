@@ -1,23 +1,31 @@
 ' Star Counter
 ' ---------------------------------
 ' Assign variables 
+Sub starcounter():
+
+' Create a variable that holds the starcounter variable that will be repeatedly used
+    Dim starcounter As Integer
+
+' Loop through each row
+    For i = 2 To 51
+    ' Initially set the counter to be 0 for each row after your first For loop
+        starcounter = 0
+' While in each row, loop through each star column 
+        For j = 4 to 8
+        ' If a column contains the word "Full-Star"...
+            If (Cells(i, j).value = "Full-Star") Then 
+
+        ' Add 1 to the starcounter 
+                starcounter = starcounter + 1
+
+            End if 
+        Next j
+    ' Don't Next i until we've iterated through each column in row i
+        Cells(i, 9).value = starcounter 
     
-    Dim i As Integer
-    Dim j As Integer
-    Dim value As String
-    Dim count As Integer
-    Dim full_star As String
+    Next i
+End sub 
 
-
-    
-
-
-For i = 2 To 51 
-    For j = 2 To 8
-        If Cells(i, j) = "Full-Star" Then
-                full_star = full_star + 1
-
-    If Cells(i, j).value = "Full-Star"
 
         
 
